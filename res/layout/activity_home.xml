@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"  >
+    
+    <ImageView
+        android:id="@+id/home_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+    
+   	<com.example.worth_a_shot.utils.FragmentTabHost
+	    android:id="@android:id/tabhost"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent" >
+
+	    <RelativeLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent" >
+
+	        <FrameLayout
+	            android:id="@android:id/tabcontent"
+	            android:layout_width="0dp"
+	            android:layout_height="0dp" />
+                  
+	        <RelativeLayout
+	            android:id="@+id/home_tab_frame"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent" >
+
+	            <FrameLayout
+	                android:id="@+id/home_tab_fragment_containter"
+	                android:layout_width="match_parent"
+	                android:layout_height="match_parent" />
+
+		        <View 
+		            android:layout_width="match_parent"
+		            android:layout_height="2dp"
+		            android:background="@drawable/shadow_fade"/>
+	        
+	        </RelativeLayout>
+
+	       	<RelativeLayout 
+	       	    android:id="@+id/home_tabs_wrapper"
+	            android:layout_width="match_parent"
+	            android:layout_height="100dp"
+	            android:layout_alignParentBottom="true" > 
+
+	            <TabWidget
+		            android:id="@android:id/tabs"
+		            android:orientation="horizontal"
+		            android:layout_width="fill_parent"
+		            android:layout_height="48dp"
+
+		            android:dividerPadding="0px"
+		            android:background="#666666"
+		            android:layout_alignParentBottom="true" /> 	      
+		                        				
+				<View 
+				    android:id="@+id/tabs_top_line"
+		            android:layout_width="match_parent"
+		        	android:layout_height="1px"
+		            android:background="#a29466"
+		            android:layout_above="@android:id/tabs" /> 
+		            		            
+	        </RelativeLayout>
+		</RelativeLayout>      
+	</com.example.worth_a_shot.utils.FragmentTabHost>
+    
+    <ListView
+        android:id="@+id/home_list"
+        android:layout_height="1dp"
+        android:layout_width="match_parent" />
+    
+</RelativeLayout>

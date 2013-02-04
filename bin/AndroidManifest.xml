@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.worth_a_shot"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="15" />
+    
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.WAS"
+        android:name=".WorthAShot" >
+        
+        <meta-data android:value="@string/facebook_app_id" android:name="com.facebook.sdk.ApplicationId"/>
+        
+        <!-- ACTIVITY REQUESTED BY FACEBOOK -->
+        <activity 
+            android:label="@string/app_name" 
+            android:name="com.facebook.LoginActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.example.worth_a_shot.activity.MultiplexActivity"
+            android:label="Worth A Shot"
+            android:screenOrientation="portrait"  >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity 
+            android:name="com.example.worth_a_shot.activity.SignInActivity"
+            android:label="Sign In"
+            android:screenOrientation="portrait"  />
+        
+        <activity 
+            android:name="com.example.worth_a_shot.activity.FacebookAuthActivity"
+            android:label="Facebook"
+            android:screenOrientation="portrait"  />
+        
+        <activity 
+            android:name="com.example.worth_a_shot.activity.HomeActivity"
+            android:label="Home"
+            android:screenOrientation="portrait"  />
+        
+        <activity 
+            android:name="com.example.worth_a_shot.activity.OrderDrinkActivity"
+            android:label="Order"
+            android:screenOrientation="portrait"  />
+        
+        <activity 
+            android:name="com.example.worth_a_shot.activity.OrderPlaceActivity"
+            android:label="Order"
+            android:screenOrientation="portrait"  />
+        
+        <activity 
+            android:name="com.example.worth_a_shot.activity.ProfileActivity"
+            android:label="Profile"
+            android:screenOrientation="portrait"  />
+        
+        <activity 
+            android:name="com.example.worth_a_shot.activity.FriendsActivity"
+            android:label="Friends"
+            android:screenOrientation="portrait"  />
+        
+        <activity 
+            android:name="com.example.worth_a_shot.activity.LoaderActivity"
+            android:label="Loader"
+            android:screenOrientation="portrait"  />
+        
+        <!-- REST SERVICE -->
+        <service android:name=".http.RestService" />
+    </application>
+
+</manifest>
